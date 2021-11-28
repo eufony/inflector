@@ -17,7 +17,7 @@
     "phpunit/phpunit": "^9.5"
   },
   "suggest": {
-    "eufony/inflector-implementation": "Virtual package for inflector implementations."
+    "eufony/inflector-implementation": "Virtual package for Inflector implementations."
   },
   "autoload": {
     "psr-4": {
