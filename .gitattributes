@@ -3,5 +3,5 @@
 .gitignore  export-ignore
 
 # Project
-.editorconfig
+.editorconfig  export-ignore
 /tests/  export-ignore
