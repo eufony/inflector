@@ -14,7 +14,7 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace Eufony\Inflector\Tests;
+namespace Eufony\Inflector\Tests\Unit;
 
 use Eufony\Inflector\InflectorInterface;
 use Eufony\Inflector\NullInflector;

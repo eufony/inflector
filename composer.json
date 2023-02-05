@@ -11,10 +11,9 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "php": ">=7.4"
+    "php": "^8.0"
   },
   "require-dev": {
-    "eufony/inflector-tests": "^1.0",
     "phpunit/phpunit": "^9.5"
   },
   "suggest": {
@@ -32,7 +31,8 @@
   },
   "scripts": {
     "test": [
-      "phpunit -c tests/phpunit.xml.dist"
+      "phpunit -c tests/Unit/phpunit.xml.dist",
+      "phpunit -c tests/Integration/phpunit.xml.dist"
     ]
   },
   "config": {
