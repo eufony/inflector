@@ -2,7 +2,7 @@
   "name": "eufony/inflector",
   "description": "Common interfaces for inflection libraries.",
   "keywords": [ "eufony", "inflector", "inflection" ],
-  "license": "MIT",
+  "license": "LGPL-3.0-or-later",
   "authors": [
     {
       "name": "Alpin H. Gencer",
