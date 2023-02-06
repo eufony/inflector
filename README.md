@@ -21,6 +21,42 @@
 
 *eufony/inflector provides a standardized interface for linguistic inflection libraries.*
 
+*eufony/inflector* is a PHP library that aims to improve interoperability between linguistic inflection implementations.
+It provides a common interface for changing the capitalization of strings, as well as the pluralization and
+singularization of words.
+
+Interested? [Here's how to get started.](#getting-started)
+
+## Getting started
+
+### Installation
+
+*eufony/inflector* is released as a [Packagist](https://packagist.org/) package and can be easily installed
+via [Composer](https://getcomposer.org/) with:
+
+    composer require "eufony/inflector"
+
+### Usage
+
+*eufony/inflector* provides `InflectorInterface`, which defines the following methods:
+
+```php
+// Convert between `PascalCase`, `snake_case`, and `camelCase`.
+echo $inflector->toPascalCase($string);
+echo $inflector->toSnakeCase($string);
+echo $inflector->toCamelCase($string);
+
+// Convert between pluralized and singularized words.
+echo $inflector->pluralize($string);
+echo $inflector->singularize($string);
+```
+
+It also provides a fake implementation that returns any string it is given without any modifications:
+
+```php
+$inflector = new NullInflector();
+```
+
 ## Contributing
 
 Found a bug or a missing feature? You can report it over at
