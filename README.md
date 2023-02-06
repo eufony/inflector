@@ -36,7 +36,7 @@ via [Composer](https://getcomposer.org/) with:
 
     composer require "eufony/inflector"
 
-### Usage
+### Basic Usage
 
 *eufony/inflector* provides `InflectorInterface`, which defines the following methods:
 
@@ -51,10 +51,18 @@ echo $inflector->pluralize($string);
 echo $inflector->singularize($string);
 ```
 
-It also provides a fake implementation that returns any string it is given without any modifications:
+It also provides a couple of pseudo-implementations to get you started:
 
 ```php
+// A fake implementation based on the Null Object Pattern
+// that returns any string it is given without any modifications.
 $inflector = new NullInflector();
+
+// A wrapper class to manually define exceptions to the return values of another implementation.
+$inflector = new ExceptionAdapter($inflector, cases: [["id", "id", "ID"]], words: ["moose", "meese"]);
+
+// A wrapper class around the inflector implementation by the Doctrine project.
+$inflector = new DoctrineInflector();
 ```
 
 ## Contributing
